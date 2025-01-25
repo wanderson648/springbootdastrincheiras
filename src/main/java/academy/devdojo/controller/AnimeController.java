@@ -4,6 +4,7 @@ import academy.devdojo.domain.Anime;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 @RestController
 @RequestMapping("v1/animes")
@@ -26,4 +27,13 @@ public class AnimeController {
                 .findFirst()
                 .orElse(null);
     }
+
+    @PostMapping
+    public Anime save(@RequestBody Anime anime) {
+        anime.setId(ThreadLocalRandom.current().nextLong(100_000));
+        Anime.getAnimes().add(anime);
+        return anime;
+    }
+
+
 }
