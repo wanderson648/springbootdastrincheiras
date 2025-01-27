@@ -1,32 +1,16 @@
 package academy.devdojo.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import java.util.ArrayList;
-import java.util.List;
+import lombok.*;
 
 @Getter
 @Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Anime {
+
+    @EqualsAndHashCode.Include
     private Long id;
     private String name;
-
-    private static List<Anime> animes = new ArrayList<>();
-
-    static {
-        var ninjakamui = new Anime(1L, "Ninja Kamui");
-        var kaijuu = new Anime(2L, "Kaijuu-8gou");
-        var kimetsuNoYaiba = new Anime(3L, "Kimetsu No Yaiba");
-
-        animes.addAll(List.of(ninjakamui, kaijuu, kimetsuNoYaiba));
-    }
-
-    public static List<Anime> getAnimes() {
-        return animes;
-    }
 }
