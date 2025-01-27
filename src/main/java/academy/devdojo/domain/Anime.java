@@ -1,8 +1,17 @@
 package academy.devdojo.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Anime {
     private Long id;
     private String name;
@@ -15,28 +24,6 @@ public class Anime {
         var kimetsuNoYaiba = new Anime(3L, "Kimetsu No Yaiba");
 
         animes.addAll(List.of(ninjakamui, kaijuu, kimetsuNoYaiba));
-    }
-
-    public Anime(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-
-    public Long getId() {
-        return this.id;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public static List<Anime> getAnimes() {
