@@ -14,7 +14,6 @@ public class ProducerHardCodeRepository {
     private final ProducerData producerData;
 
 
-
     public List<Producer> findAll() {
         return producerData.getProducers();
     }
