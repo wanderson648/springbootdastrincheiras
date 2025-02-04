@@ -29,7 +29,7 @@ class ProducerServiceTest {
     private ProducerHardCodeRepository repository;
 
     private List<Producer> producerList = new ArrayList<>();
-    ;
+
 
     @BeforeEach
     void init() {
