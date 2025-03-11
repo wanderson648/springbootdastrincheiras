@@ -4,7 +4,6 @@ import academy.devdojo.domain.Anime;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,7 +12,7 @@ import java.util.Optional;
 public class AnimeHardCodeRepository {
 
     private final AnimeData animeData;
-   
+
     public List<Anime> findAll() {
         return animeData.getAnimes();
     }

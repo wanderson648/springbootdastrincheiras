@@ -71,8 +71,8 @@ public class ProducerController {
     public ResponseEntity<Void> update(@RequestBody ProducerPutRequest request) {
         log.debug("Request to update Producer", request);
 
-       var producerToUpdate = mapper.toProducer(request);
-       service.update(producerToUpdate);
+        var producerToUpdate = mapper.toProducer(request);
+        service.update(producerToUpdate);
 
         return ResponseEntity.noContent().build();
     }

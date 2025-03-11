@@ -9,7 +9,7 @@ import java.util.List;
 @Component
 public class AnimeData {
 
-    private List<Anime> animes = new ArrayList<>();
+    private final List<Anime> animes = new ArrayList<>();
 
     {
         var mappa = Anime.builder().id(1L).name("Mappa").build();
